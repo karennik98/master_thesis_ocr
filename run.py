@@ -12,12 +12,12 @@ from multiprocessing import Pool
 
 from tqdm import tqdm
 
-from trdg.data_generator import FakeTextDataGenerator
-from trdg.string_generator import (create_strings_from_dict,
+from data_generator import FakeTextDataGenerator
+from string_generator import (create_strings_from_dict,
                                    create_strings_from_file,
                                    create_strings_from_wikipedia,
                                    create_strings_randomly)
-from trdg.utils import load_dict, load_fonts
+from utils import load_dict, load_fonts
 
 
 def margins(margin):
@@ -405,15 +405,6 @@ def main():
             args.length, args.random, args.count, lang_dict
         )
 
-    if args.language == "ar":
-        from arabic_reshaper import ArabicReshaper
-        from bidi.algorithm import get_display
-
-        arabic_reshaper = ArabicReshaper()
-        strings = [
-            " ".join([get_display(arabic_reshaper.reshape(w)) for w in s.split(" ")[::-1]])
-            for s in strings
-        ]
     if args.case == "upper":
         strings = [x.upper() for x in strings]
     if args.case == "lower":
