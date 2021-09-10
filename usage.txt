@@ -1,0 +1,15 @@
+usage: run.py [-h] [--output_dir [OUTPUT_DIR]] [-i [INPUT_FILE]]
+              [-l [LANGUAGE]] -c [COUNT] [-rs] [-let] [-num] [-sym]
+              [-w [LENGTH]] [-r] [-f [FORMAT]] [-t [THREAD_COUNT]]
+              [-e [EXTENSION]] [-k [SKEW_ANGLE]] [-rk] [-wk] [-bl [BLUR]]
+              [-rbl] [-b [BACKGROUND]] [-hw] [-na NAME_FORMAT]
+              [-om OUTPUT_MASK] [-d [DISTORSION]]
+              [-do [DISTORSION_ORIENTATION]] [-wd [WIDTH]] [-al [ALIGNMENT]]
+              [-or [ORIENTATION]] [-tc [TEXT_COLOR]] [-sw [SPACE_WIDTH]]
+              [-cs [CHARACTER_SPACING]] [-m [MARGINS]] [-fi] [-ft [FONT]]
+              [-fd [FONT_DIR]] [-id [IMAGE_DIR]] [-ca [CASE]] [-dt [DICT]]
+              [-ws] [-stw [STROKE_WIDTH]] [-stf [STROKE_FILL]]
+              [-im [IMAGE_MODE]]
+run.py: error: the following arguments are required: -c/--count
+
+-c=100 -dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt -fd=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/fonts/hy -w=10 -
