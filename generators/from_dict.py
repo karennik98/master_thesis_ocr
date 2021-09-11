@@ -1,7 +1,7 @@
 import os
 
 from .from_strings import GeneratorFromStrings
-from ..data_generator import FakeTextDataGenerator
+from ..data_generator import TextDataGenerator
 from ..string_generator import create_strings_from_dict
 from ..utils import load_dict, load_fonts
 

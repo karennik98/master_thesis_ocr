@@ -1,6 +1,6 @@
 import os
 
-from ..data_generator import FakeTextDataGenerator
+from ..data_generator import TextDataGenerator
 from ..utils import load_dict, load_fonts
 
 
@@ -81,7 +81,7 @@ class GeneratorFromStrings:
             raise StopIteration
         self.generated_count += 1
         return (
-            FakeTextDataGenerator.generate(
+            TextDataGenerator.generate(
                 self.generated_count,
                 self.strings[(self.generated_count - 1) % len(self.strings)],
                 self.fonts[(self.generated_count - 1) % len(self.fonts)],

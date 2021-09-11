@@ -11,7 +11,7 @@ except ImportError as e:
     print("Missing modules for handwritten text generation.")
 
 
-class FakeTextDataGenerator(object):
+class TextDataGenerator(object):
     @classmethod
     def generate_from_tuple(cls, t):
         """
