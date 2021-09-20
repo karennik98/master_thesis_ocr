@@ -36,7 +36,7 @@ def parse_arguments():
         description="Generate synthetic text data for text recognition."
     )
     parser.add_argument(
-        "--output_dir", type=str, nargs="?", help="The output directory", default="out/"
+        "--output_dir", type=str, nargs="?", help="The output directory", default="out_with_d2_do2_image/"
     )
     parser.add_argument(
         "-i",
