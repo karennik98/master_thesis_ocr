@@ -24,3 +24,5 @@ run.py: error: the following arguments are required: -c/--count
 -do=1
 -w=10
 -d=1
+
+-dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt -ft=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/fonts/hy/FFF_Tusj.ttf -do=1 -w=5 -d=0 -do=0 -b=1 -om=1 -f=300 -t=6 -or=0 -stw=5 -na=2 -c=2
