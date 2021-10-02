@@ -36,7 +36,7 @@ def parse_arguments():
         description="Generate synthetic text data for text recognition."
     )
     parser.add_argument(
-        "--output_dir", type=str, nargs="?", help="The output directory", default="out_with_d2_do2_image/"
+        "--output_dir", type=str, nargs="?", help="The output directory", default="out"
     )
     parser.add_argument(
         "-i",
@@ -368,6 +368,7 @@ def main():
             for p in os.listdir(args.font_dir)
             if os.path.splitext(p)[1] == ".ttf"
         ]
+        print(fonts)
     elif args.font:
         if os.path.isfile(args.font):
             fonts = [args.font]

@@ -26,3 +26,12 @@ run.py: error: the following arguments are required: -c/--count
 -d=1
 
 -dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt -ft=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/fonts/hy/FFF_Tusj.ttf -do=1 -w=5 -d=0 -do=0 -b=1 -om=1 -f=300 -t=6 -or=0 -stw=5 -na=2 -c=2
+
+
+-dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt -fd=/home/karen/master/master-thesis-ocr/fonts/hy/
+-do=1 -w=5 -d=0 -do=0 -b=1 -f=48 -t=6 -or=0 -na=2 -c=100
+
+-dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt -ft=/home/karen/master/master-thesis-ocr/fonts/hy/NotoSansArmenian-Medium.ttf
+-do=1 -w=5 -d=0 -do=0 -b=1 -f=48 -t=6 -or=0 -na=2 -c=100
+
+python3.6 ./run.py -dt=/home/karen/master/data-generator/TextRecognitionDataGenerator/trdg/dicts/hy.txt  -do=1 -w=5 -d=0 -do=0 -b=1 -f=48 -t=6 -or=0 -na=2 -c=1
