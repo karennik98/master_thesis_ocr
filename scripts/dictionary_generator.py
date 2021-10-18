@@ -40,11 +40,27 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        "--letters_file",
+        "--big_letters_file",
         type=str,
         nargs="?",
-        help="The letters file",
-        default="hy.txt"
+        help="The big letters file",
+        default=""
+    )
+
+    parser.add_argument(
+        "--small_letters_file",
+        type=str,
+        nargs="?",
+        help="The small letters file",
+        default=""
+    )
+
+    parser.add_argument(
+        "--numbers_file",
+        type=str,
+        nargs="?",
+        help="The numbers file",
+        default=".txt"
     )
 
     parser.add_argument(
