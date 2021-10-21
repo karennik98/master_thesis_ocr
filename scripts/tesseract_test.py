@@ -2,11 +2,10 @@ import os
 import ctypes
 
 import argparse
-import re
 
 lang = "hye"
-libname = "/usr/local/lib/libtesseract.a"
-os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/4.00/tessdata/'
+libname = "/home/karen/installed_libs/tesseract_source/tesseract/build/libtesseract.so"
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/4.00/tessdata'
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
@@ -64,8 +63,9 @@ def test_tesseract(image, txt):
     tesseract = ctypes.cdll.LoadLibrary(libname)
     tesseract.TessVersion.restype = ctypes.c_char_p
     tesseract_version = tesseract.TessVersion()
+    print('Tesseract-ocr version', tesseract_version)
     api = tesseract.TessBaseAPICreate()
-    rc = tesseract.TessBaseAPIInit3(api, TESSDATA_PREFIX, lang)
+    rc = tesseract.TessBaseAPIInit3(api, TESSDATA_PREFIX, "h")
     if (rc):
         tesseract.TessBaseAPIDelete(api)
         print("Could not initialize tesseract.\n")
