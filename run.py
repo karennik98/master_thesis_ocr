@@ -463,7 +463,11 @@ def main():
                 file_name = str(i) + "." + args.extension
                 if args.space_width == 0:
                     file_name = file_name.replace(" ", "")
+                file_object = open(os.path.join(args.output_dir, str(i) + ".txt"), "w", encoding="utf8")
+                file_object.write(strings[i] + '\n')
+                file_object.close();
                 f.write("{} {}\n".format(file_name, strings[i]))
+        os.remove(os.path.join(args.output_dir, "labels.txt"))
 
 
 if __name__ == "__main__":
