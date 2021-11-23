@@ -127,7 +127,7 @@ def parse_arguments():
         type=str,
         nargs="?",
         help="Define the extension to save the image with",
-        default="jpg",
+        default="tif",
     )
     parser.add_argument(
         "-k",
@@ -463,9 +463,9 @@ def main():
                 file_name = str(i) + "." + args.extension
                 if args.space_width == 0:
                     file_name = file_name.replace(" ", "")
-                file_object = open(os.path.join(args.output_dir, str(i) + ".txt"), "w", encoding="utf8")
+                file_object = open(os.path.join(args.output_dir, str(i) + ".gt.txt"), "w", encoding="utf8")
                 file_object.write(strings[i] + '\n')
-                file_object.close();
+                file_object.close()
                 f.write("{} {}\n".format(file_name, strings[i]))
         os.remove(os.path.join(args.output_dir, "labels.txt"))
 
